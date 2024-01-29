@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Tradición - Con Sabor a México</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Con excepción del formulario de contacto, todo el resto del código comentado se encuentra explicado 
+en el index.html -->
+
+    <!-- Comienza el Menú de Navegación Sticky  -->
+    <header>
+        <nav class="navBar">
+            <div class="menu-container">
+                <div class="logo">
+                    <a href="index.html"><img src="../img/logoGrandeNegativoPequeno.png" alt="logo-sabor-a-mexico"></a>
+                </div>
+                <!-- Botón para abrir el sideBar -->
+                <div class="menu-iconBar" id="buttonBars">
+                    <i class="fas fa-bars" id="openMenu"></i>
+                </div>
+                <div class="nav-links" id="nav-links">
+                    <ul>
+                        <li><a href="index.html" class="current">Inicio</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#aboutUs">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <button type="button" class="basket-shopping">
+                            <i class="fa-solid fa-basket-shopping"></i></button>
+                        <p class="btns-account">
+                            <a href="#">Mi cuenta</a>
+                            <a href="#">Registrarse</a>
+                        </p>
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <input type="search" class="search-data" placeholder="Buscar...">
+                    <button type="submit" class="fa fa-search"></button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- Termina el Menú de Navegación  -->
+
+
+
+    <!-- Comienza Formulario de Contacto -->
+    <!--  
+        El formulario de contacto se almacenó en un selector con la clase ''.contactWrapper' para que su diseño responsivo
+        fuera mucho más fácil de modificar.  Mientras que los inputs y la información del formulario 
+        se colocaron dentro de dos divs por separado, con el mismo objetivo. 
+    -->
+    <section class="contactForm">
+        <h2 class="contactUs">
+            Contáctate con Nosotros
+        </h2>
+        <div class="contactWrapper">
+            <div class="contactBox">
+                <form>
+                    <label>Nombre</label>
+                    <input type="text" name="name" id="name">
+
+                    <label>Apellidos</label>
+                    <input type="text" name="lastname" id="lastname">
+
+                    <label>Número de Teléfono</label>
+                    <input type="tel" name="phone" id="phone">
+
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" id="email">
+
+                    <label class="block">Mensaje</label>
+                    <textarea name="message" rows="5"></textarea>
+                    <!-- Se dejo el enlace de la página de Google en el href para demostrar que el botón de envío
+                    corresponde con el evento del preventDefault. -->
+                    <button class="block" type="submit" id="send"><a href="https://www.google.com.mx/">Enviar</a></button>
+                </form>
+            </div>
+            <div class="contactInfo">
+                <h4>Más información</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i>Calle Valle Bravo, Col. Río Tinto. 13</li>
+                    <li><i class="fa-brands fa-whatsapp"></i>+52 48 484 579</li>
+                    <li><i class="fa-solid fa-envelope"></i>dulcetradicion@gmail.mx</li>
+                </ul>
+                <p>
+                    No dudes en ponerte en contacto con nosotros si necesitas aclarar cualquier duda. 
+                    Estamos a tu disposición de lunes a viernes de 09:00am a 14:00pm y por las tardes de 17:00pm a 21:00pm.
+                    Los Sábados de 09:00am hasta el medio día. Cualquier entrega a domicilio se realiza durante días laborales.
+                </p>
+                <div class="map">
+                    <!-- El siguiente iframe muestra un mapa sacado de la página de Google Maps;
+                    pero es sólo con fines ésteticos por el momento. No conduce a ninguna dirección real -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240864.19466066526!2d-99.308425178994!3d19.39065936375796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2zQ2l1ZGFkIGRlIE3DqXhpY28sIENETVgsIE3DqXhpY28!5e0!3m2!1ses!2ses!4v1689366521070!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Termina Formulario de Contacto -->
+
+
+
+    <!-- Empieza Apartado "Nuestros Servicios" -->
+    <section class="services" id="services">
+        <h2 class="ourServices">
+            Nuestros Servicios
+        </h2>
+        <div class="box-container">
+            <div class="box">
+                <i class="fa fa-hand-holding-heart"></i>
+                <h2>Elaborados con cariño y dedicación</h2>
+                <p>Estamos orgullosos de colaborar con un gran grupo de artesanos que hacen posible
+                    toda la elaboración de los dulces típicos mexicanos.</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-truck-ramp-box"></i>
+                <h2>Entregas rápidas a toda la República</h2>
+                <p>Deseamos que todo México siga conservando su gusto por las tradiciones,
+                    por eso queremos ofrecer nuestros productos con la mejor calidad.</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-credit-card"></i>
+                <h2>Facilidad en todos los tipos de pagos</h2>
+                <p>Lo más importante son nuestros clientes, es por ello que procuramos que todo sea
+                    seguro al momento de poner su confianza en nosotros. </p>
+            </div>
+        </div>
+    </section>
+    <!-- Termina Apartado "Nuestros Servicios" -->
+
+
+
+    <!-- Comienza Apartado "Nuestros Productos" -->
+    <section class="products" id="products">
+        <h2 class="ourServices">
+            Productos Artesanales
+        </h2>
+        <div class="shop" id="shop">
+            <!-- Las Product Cards están creadas desde JavaScript -->
+        </div>
+    </section>
+    <!-- Termina Apartado "Nuestros Productos" -->
+
+    
+
+    <!-- Comienza Apartado "Sobre Nosotros" -->
+    <section class="aboutUs" id="aboutUs">
+        <h2 class="tittleAboutus">
+            Sobre Nosotros
+        </h2>
+        <div class="sectionAboutus">
+            <div class="main-img">
+                <img src="../img/aboutUs2.jpeg" alt="vendedora de dulces">
+            </div>
+            <div class="aboutContent">
+                <h2>Nuestra Historia</h2>
+                <h3>Colaboramos conservando la tradición,
+                    <br>
+                    Siempre apoyando el talento y la dedicación.
+                </h3>
+                <hr>
+                <p>
+                    Con Sabor a México no es solo una empresa dedicada a la
+                    distribución y venta de dulces típicos, sino que además
+                    nos importa seguir impulsando aquellas personas que dedican
+                    su tiempo y su pasión a la manufactura de nuestros dulces.
+                    Permitiendo que las tradiciones perduren y puedan llegar
+                    a todos los hogares mexicanos.
+                    Es por ello que nos comprometimos a presentar una gran variedad
+                    de productos elaborados con cariño y calidad para que siempre
+                    reflejen el talento, del cual nos sentimos orgullosos.
+                </p>
+                <div class="last-text">
+                    <div>
+                        <h2>+10</h2>
+                        <h3 class="text1">Productos Elaborados</h3>
+                    </div>
+                    <div>
+                        <h2>20k</h2>
+                        <h3 class="text2">Clientes Felices</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Termina Apartado "Sobre Nosotros" -->
+
+
+
+    <!-- Boton Scroll Up -->
+    <div id="btnUp">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- Termina boton Scroll Up  -->
+
+
+
+    <!-- Comienza el Footer -->
+    <footer class="footerBox">
+        <div class="group1">
+            <div class="box">
+                <a href="index.html"><img src="../img/logoGrandeNegativoPequeno.png" alt="logo-sabor-a-mexico"></a>
+            </div>
+            <div class="box">
+                <h3>Dirección</h3>
+                <div class="icon1">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Calle Valle Bravo, Col. Río Tinto. 13</p>
+                </div>
+                <h3>Teléfono</h3>
+                <div class="icon2">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>+52 48 484 579</p>
+                </div>
+                <h3>Correo Electrónico</h3>
+                <div class="icon3">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>dulcetradicion@gmail.mx</p>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Síguenos</h3>
+                <div class="redes-sociales">
+                    <a href="https://es-la.facebook.com/" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/?hl=es" class="instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/i/flow/signup" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="group2">
+            <small>&copy; 2023 <b>Con Sabor a México</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/contact.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/buttonScrollUp.js"></script>
+
+</html>

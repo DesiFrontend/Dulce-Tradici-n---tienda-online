@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Tradición - Con Sabor a México</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- framework para el uso de los íconos de la web, la justificación se encuentra en la memoria -->
+</head>
+
+<body>
+
+    <!-- 
+        El menú de navegación se encuentra fijo a la pantalla de navegación, dividido en 3 secciones: 
+        el logo de la empresa, los enlaces a los distintos apartados y una barra de busqueda. Se adapta a
+        los diferentes tamaños de dispositivos y se convierte en un menú desplegable, haciendo uso del 
+        botón menú hamburguesa (menu-iconBar). 
+    -->
+    <!-- Comienza el Menú de Navegación Sticky  -->
+    <header>
+        <nav class="navBar">
+            <div class="menu-container">
+
+                <div class="logo">
+                    <a href="index.html"><img src="../img/logoGrandeNegativoPequeno.png" alt="logo-sabor-a-mexico"></a>
+                </div>
+
+                <!-- Botón para abrir el sideBar -->
+                <div class="menu-iconBar" id="buttonBars">
+                    <i class="fas fa-bars" id="openMenu"></i>
+                </div>
+
+                <!-- Los enlaces del menú -->
+                <div class="nav-links" id="nav-links">
+                    <ul>
+                        <li><a href="index.html" class="current">Inicio</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#aboutUs">Nosotros</a></li>
+                        <!-- La página de contacto se convierte en un enlace a diferencia del resto de los apartados,
+                        su justificación se explica más detalladamente en la memoria. -->
+                        <li><a href="contact.html">Contacto</a></li>
+                        <!-- La canasta de compra y el resto de los enlaces que se encuentran por debajo de éste,
+                        no se encuentran desarrollados, es decir; por el momento no conducen a ningún conetenido -->
+                        <button type="button" class="basket-shopping">
+                            <i class="fa-solid fa-basket-shopping"></i></button>
+                        <p class="btns-account">
+                            <a href="#">Mi cuenta</a>
+                            <a href="#">Registrarse</a>
+                        </p>
+                    </ul>
+                </div>
+
+                <!-- Barra de Busqueda, no contiene BackEnd, por el momento cuenta con un propósito estético.
+                Se planea adaptarlo para hacer una busqueda completa de los productos que se ofrecen -->
+                <div class="search">
+                    <input type="search" class="search-data" placeholder="Buscar...">
+                    <button type="submit" class="fa fa-search"></button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- Termina el Menú de Navegación  -->
+
+
+
+    <!-- 
+        Para la vista inicial de la página, desarrolle una animación con el uso de CSS y JS para simular un efecto
+        de una secuencia de 3 imágenes tipo background-image que se van intercalando cada 3 segundos y con una
+        animación que da la sensación de estar haciendo un pequeño zoom a la imágen antes de pasar a la siguiente.
+    -->
+    <!-- Empieza la Animación del Fondo de Pantalla (Slider) -->
+    <main class="banner">
+        <!-- El primer contenedor donde se encuentran alojadas las imágenes, llamado 'slider' -->
+        <div class="slider">
+            <img class="bkImg" id="slideImg" src="../img/fondo2.png" alt="canastilla con dulces tradicionales">
+        </div>
+        <!-- El segundo contenedor, el overlay es una capa o sombra transparente que esta por encima del slider,
+            para hacer que el texto pueda reesaltar por encima de las imágenes -->
+        <div class="overlay">
+            <!-- El tercer contenedor ocupa, en este caso, el contenido -->
+            <div class="container">
+                <h1>
+                    Un pequeño trozo de México en cada bocado
+                </h1>
+                <p> Nuestros dulces artesanales están elaborados
+                    a mano y con la dedicación que merece cada uno.
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- Termina la Animación del Fondo de Pantalla (Slider) -->
+
+
+    <!-- 
+        La caja o el contenedor principal lleva dentro los tres contenedores con los datos de
+        los servicos que maneja la empresa, se adaptan utilizando la maquetación por rejilla.
+        Centrado, con un efecto hover.
+    -->
+    <!-- Empieza Apartado "Nuestros Servicios" -->
+    <section class="services" id="services">
+        <h2 class="ourServices">
+            Nuestros Servicios
+        </h2>
+        <div class="box-container">
+            <div class="box">
+                <i class="fa fa-hand-holding-heart"></i>
+                <h2>Elaborados con cariño y dedicación</h2>
+                <p>Estamos orgullosos de colaborar con un gran grupo de artesanos que hacen posible
+                    toda la elaboración de los dulces típicos mexicanos.</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-truck-ramp-box"></i>
+                <h2>Entregas rápidas a toda la República</h2>
+                <p>Deseamos que todo México siga conservando su gusto por las tradiciones,
+                    por eso queremos ofrecer nuestros productos con la mejor calidad.</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-credit-card"></i>
+                <h2>Facilidad en todos los tipos de pagos</h2>
+                <p>Lo más importante son nuestros clientes, es por ello que procuramos que todo sea
+                    seguro al momento de poner su confianza en nosotros. </p>
+            </div>
+        </div>
+    </section>
+    <!-- Termina Apartado "Nuestros Servicios" -->
+
+
+
+    <!-- 
+        Las Cards de los productos se han creado con la ayuda de JS con la intención de no repetir
+        código en el HTML, y en caso de añadir más productos, éstos puedan ser 
+        fácilmente modificados en el array de objetos. 
+    -->
+    <!-- Comienza Apartado "Nuestros Productos" -->
+    <section class="products" id="products">
+        <h2 class="ourServices">
+            Productos Artesanales
+        </h2>
+        <div class="shop" id="shop">
+            <!-- Las Product Cards están creadas desde el archivo products.js -->
+        </div>
+    </section>
+    <!-- Termina Apartado "Nuestros Productos" -->
+
+    
+
+    <!-- 
+        Ésta sección se divide en dos columnas, empezando por el lado izquierdo se muestra
+        una imágen referente al contenido y la otra parte con la información sobre el origen de la empresa. 
+        Se adapta con el uso del display grid, por lo que al llegar a una medida menor de pantalla 
+        (1041px), la sección se ajusta a una sola columna.
+    -->
+    <!-- Comienza Apartado "Sobre Nosotros" -->
+    <section class="aboutUs" id="aboutUs">
+        <h2 class="tittleAboutus">
+            Sobre Nosotros
+        </h2>
+        <div class="sectionAboutus">
+            <div class="main-img">
+                <img src="../img/aboutUs2.jpeg" alt="vendedora de dulces">
+            </div>
+            <div class="aboutContent">
+                <h2>Nuestra Historia</h2>
+                <h3>Colaboramos conservando la tradición,
+                    <br>
+                    Siempre apoyando el talento y la dedicación.
+                </h3>
+                <hr>
+                <p>
+                    Con Sabor a México no es solo una empresa dedicada a la
+                    distribución y venta de dulces típicos, sino que además
+                    nos importa seguir impulsando aquellas personas que dedican
+                    su tiempo y su pasión a la manufactura de nuestros dulces.
+                    Permitiendo que las tradiciones perduren y puedan llegar
+                    a todos los hogares mexicanos.
+                    Es por ello que nos comprometimos a presentar una gran variedad
+                    de productos elaborados con cariño y calidad para que siempre
+                    reflejen el talento, del cual nos sentimos orgullosos.
+                </p>
+                <div class="last-text">
+                    <div>
+                        <h2>+10</h2>
+                        <h3 class="text1">Productos Elaborados</h3>
+                    </div>
+                    <div>
+                        <h2>20k</h2>
+                        <h3 class="text2">Clientes Felices</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Termina Apartado "Sobre Nosotros" -->
+
+
+
+    <!--  
+        Botón que tiene como finalidad de ir hacia arriba de la pantalla. 
+        Posee un efecto hover que aumenta un poco su tamaño y aparece una ligera sombre como marco.
+        Se adapta al tamaño del dispositivo, cambiando su escala y su posición, con proposito meramente estético.
+        Haciendo uso de JS, el botón tiene la característica de aparecer fijamente mientras el usuario hace scroll
+        hacia abajo y desaparece cuando llega al principio de la pantalla.
+    -->
+    <!-- Boton Scroll Up -->
+    <div id="btnUp">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- Termina boton Scroll Up  -->
+
+
+
+    <!--  
+        Dentro del Footer se encuentra el logo de la empresa, convertido en un enlace para volver a cargar la página.
+        Después cuenta con la información de contacto de la empresa y por último la sección
+        de las redes sociales. Éstas últimas, contienen un hover.
+        Al final del Footer, destaca lo que serían los Derechos Reservados de la página. Se adapta a los dispositivos.
+    -->
+    <!-- Comienza el Footer -->
+    <footer class="footerBox">
+        <div class="group1">
+            <div class="box">
+                <a href="index.html"><img src="../img/logoGrandeNegativoPequeno.png" alt="logo-sabor-a-mexico"></a>
+            </div>
+            <div class="box">
+                <h3>Dirección</h3>
+                <div class="icon1">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Calle Valle Bravo, Col. Río Tinto. 13</p>
+                </div>
+                <h3>Teléfono</h3>
+                <div class="icon2">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>+52 48 484 579</p>
+                </div>
+                <h3>Correo Electrónico</h3>
+                <div class="icon3">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>dulcetradicion@gmail.mx</p>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Síguenos</h3>
+                <div class="redes-sociales">
+                    <a href="https://es-la.facebook.com/" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/?hl=es" class="instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/i/flow/signup" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="group2">
+            <small>&copy; 2023 <b>Con Sabor a México</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/contact.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/buttonScrollUp.js"></script>
+
+</html>
